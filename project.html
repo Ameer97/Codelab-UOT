@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Task</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <nav id="nave" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#" onclick="openNav()">CodeLab UOT</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseid" aria-controls="collapseid" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+
+
+        <div class="collapse navbar-collapse" id="collapseid">
+            <ul class="navbar-nav mr-auto">
+                <li> <a href="https://scontent.fbgt1-2.fna.fbcdn.net/v/t1.0-9/25507865_1496381317114529_8528346837616781786_n.png?_nc_eui2=v1%3AAeFwyGxeCt-Z9Hw-zuxZOCl_rxfG9hVdbWH4z9zgXwVnZjkZODvH1UXjfMRAeq6Ep7QzuMBzwfy1LN65tOqnE-G6Gc5T9555BjWD2XdHYeZEtg&oh=b37ea5e44504bd7f44326e70eb94dcaa&oe=5AD9D4AF"> <img src="code.png" width=16%></a> </li>
+                <li class="nav-item active"><a class="nav-link" href="http://codelab.camp/">Home</a></li>
+                <li><a class="nav-link" href="https://www.facebook.com/CodeLabBootcamp/">Facebook</a></li>
+                <li><a class="nav-link" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=sabri@codelab.camp">ContactUs</a></li>
+
+            </ul>
+        </div>
+
+    </nav>
+
+
+    <br><br><br><br>
+
+
+
+
+
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul style="width: 14%">
+            <a href="https://www.facebook.com/groups/192857781459541/members">Leaders</a>
+            <li class="nav-item active"> <a href="https://www.facebook.com/SniperDW"> <img src="1.jpg" width="200" height="200"> </a> </li>
+
+            <li class="nav-item active"> <a href="https://web.facebook.com/khalid.m.sheet"> <img src="2.jpg" width="200" height="200"> </a> </li>
+
+            <li class="nav-item active"> <a href="https://web.facebook.com/Nael61636"> <img src="3.jpg" width="200" height="200"> </a> </li>
+
+            <li class="nav-item active"> <a href="https://web.facebook.com/hdrm14"> <img src="4.jpg" width="200" height="200"> </a> </li>
+
+            <li class="nav-item active"> <a href="https://web.facebook.com/diyar.wala"> <img src="5.jpg" width="200" height="200"> </a> </li>
+
+
+        </ul>
+
+    </div>
+
+    <section>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+
+                    <div class="card" style="width: 20rem">
+                        <img class="card-img-top" src="user-1-512.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Add New Developer</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="container">
+                                <dov class="row">
+                                    <div class="col-6">
+                                        <button href="add.html" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add</button>
+
+
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h1>Add User Information</h1>
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">User Id</label>
+                                                            <input type="text" class="form-control" v-model="ID" placeholder="Enter Id">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">User Name</label>
+                                                            <input type="text" class="form-control" v-model="NAME" placeholder="Enter Name">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">User Age</label>
+                                                            <input type="text" class="form-control" v-model="AGE" placeholder="Enter Age">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">User Phone</label>
+                                                            <input type="text" class="form-control" v-model=PHONE "" placeholder="Enter Phone">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">User Salary</label>
+                                                            <input type="text" class="form-control" v-model="SLALARY" placeholder="Enter Salary">
+                                                        </div>
+
+                                                        <button id="add" @click="vclickPost" class="btn btn-primary">Submit</button>
+
+
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </dov>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+
+                    <div class="card" style="width: 20rem">
+                        <img class="card-img-top" src="photo.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Get All Developers</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="container">
+                                <dov class="row">
+                                    <div class="col-6">
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal-two">Get All</button>
+
+
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal-two">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h1>All The Developers: </h1>
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+
+                                                        <table id="get" border="1px">
+                                                            <tr>
+                                                                <th> Index </th>
+                                                                <th>#</th>
+                                                                <th>Name</th>
+                                                                <th>Age</th>
+                                                                <th>Salary</th>
+                                                                <th>Phone</th>
+                                                            </tr>
+                                                            <tr v-for="(item, index) in arr">
+                                                                <td>{{ index }}</td>
+                                                                <td>{{ item.id }}</td>
+                                                                <td>{{ item.name }}</td>
+                                                                <td>{{ item.age }}</td>
+                                                                <td>{{ item.salary }}</td>
+                                                                <td>{{ item.phone }}</td>
+                                                            </tr>
+                                                        </table>
+
+
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dov>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w-100">
+        <h3>copyright &copy; 2018 all rights reserved</h3>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
